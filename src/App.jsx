@@ -1,5 +1,6 @@
-
 import React from 'react';
+import Inicio from './components/inicio'
+import Base from './components/Base'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,12 +12,13 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/">
+          <Base/>
+        </Route>
         <Route path="/inicio">
-          Estas en Inicio
+          <Inicio/>
         </Route>
-        <Route path="/">
-          Esta es la url base
-        </Route>
+        
       </Switch>
       
     </Router>
