@@ -1,5 +1,5 @@
 import React from 'react';
-import Inicio from './components/inicio'
+import Inicio from './components/Inicio'
 import Base from './components/Base'
 import {
   BrowserRouter as Router,
@@ -14,12 +14,14 @@ function App() {
       <Link to="/inicio">Inicio</Link>
       <Link to="/">Base</Link>
       <Switch>
+         <Route path="/inicio/:id/:nombre/:edad">
+          <Inicio/>
+        </Route>
         <Route exact path="/">
           <Base/>
         </Route>
-        <Route path="/inicio">
-          <Inicio/>
-        </Route>
+
+       
         
       </Switch>
       
